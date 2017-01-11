@@ -3,7 +3,7 @@ import {SearchBar} from "../searchBar/SearchBar";
 import FlatButton from "material-ui/FlatButton";
 import FontIcon from "material-ui/FontIcon";
 import moment from "moment";
-import "./topNav.css";
+require("./topNav.css");
 
 interface TopNavProps extends React.Props<any> {
 }

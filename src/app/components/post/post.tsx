@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./post.css";
+require("./post.css");
 
 interface PostProps extends React.Props<any> {
     item: any;
