@@ -6,7 +6,7 @@ var WebpackNotifierPlugin = require('webpack-notifier');
 module.exports = {
   resolve: {
     extensions: ['', '.ts', '.tsx', '.js', '.json', '.jsx'],
-    modulesDirectories: ['src', 'node_modules'],
+    modulesDirectories: ['src', 'node_modules']
   },
   entry: {
     hotLoader: ['react-hot-loader/patch', 'webpack/hot/only-dev-server'],

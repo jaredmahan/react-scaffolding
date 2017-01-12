@@ -1,27 +1,26 @@
-var webpack = require('webpack');
+var webpackConfig = require('./webpack.config.test');
 
 module.exports = function (config) {
   config.set({
-    browsers: [ 'Chrome' ], //run in Chrome
+    browsers: ['Chrome'], //run in Chrome
     singleRun: true, //just run once by default
-    frameworks: [ 'mocha' ], //use the mocha test framework
+    frameworks: ['mocha'], //use the mocha test framework
     files: [
-      'tests.webpack.js' //just load this file
+      '../**/*.spec.ts'
     ],
     preprocessors: {
-      'tests.webpack.js': [ 'webpack', 'sourcemap' ] //preprocess with webpack and our sourcemap loader
+      'src/**/*.spec.ts': ['webpack', 'sourcemap'] //preprocess with webpack and our sourcemap loader
     },
-    reporters: [ 'dots' ], //report results in this format
-    webpack: { //kind of a copy of your webpack config
-      devtool: 'inline-source-map', //just do inline source maps instead of the default
-      module: {
-        loaders: [
-          { test: /\.js$/, loader: 'babel-loader' }
-        ]
-      }
+    webpack: {
+      module: webpackConfig.module,
+      resolve: webpackConfig.resolve
     },
-    webpackServer: {
-      noInfo: true //please don't spam the console when running in karma!
-    }
+    reporters: ['progress'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    singleRun: false,
+    concurrency: Infinity
   });
 };
