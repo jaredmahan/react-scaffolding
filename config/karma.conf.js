@@ -1,26 +1,24 @@
 var webpackConfig = require('./webpack.config.test');
 
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = function (config) {
   config.set({
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: '',
+    autoWatch: true,
     browsers: ['Chrome'], //run in Chrome
-    singleRun: true, //just run once by default
-    frameworks: ['mocha'], //use the mocha test framework
+    frameworks: ['mocha', 'chai'], //use the mocha test framework
     files: [
-      '../**/*.spec.ts'
+      '../src/**/*.spec.tsx'
     ],
     preprocessors: {
-      'src/**/*.spec.ts': ['webpack', 'sourcemap'] //preprocess with webpack and our sourcemap loader
+      '../src/**/*.spec.tsx': ['webpack'],
     },
     webpack: {
       module: webpackConfig.module,
       resolve: webpackConfig.resolve
-    },
-    reporters: ['progress'],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: true,
-    singleRun: false,
-    concurrency: Infinity
+    }
   });
 };
