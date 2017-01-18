@@ -27,7 +27,7 @@ module.exports = {
     ],
     loaders: [
       { test: /\.tsx?$/, loaders: ['babel', 'awesome-typescript-loader'] },
-      { test: /\.ts?$/, loader: 'awesome-typescript-loader' },
+      { test: /^(?!.*\.spec\.ts$).*\.ts$/, loader: 'awesome-typescript-loader' },
       { test: /\.html$/, loader: 'html' },
       { test: /\.json$/, loader: "json-loader" }
     ]

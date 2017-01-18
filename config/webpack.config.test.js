@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
+    noInfo: true,
     devtool: 'inline-source-map',
     resolve: {
         extensions: ['', '.ts', '.tsx', '.js', '.json', '.jsx'],

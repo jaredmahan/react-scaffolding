@@ -17,7 +17,7 @@ export class Page extends React.Component<PageProps, {}> {
         return (<div className="page">
             {this.props.isFetching ?
                  <div>Loading...</div> :
-                 this.props.items.map(item => <Post key={item.id} item={item} />)
+                 this.props.items.map(item => <Post key={item.id} url={item.url} title={item.title} />)
                 }
         </div>);
     }

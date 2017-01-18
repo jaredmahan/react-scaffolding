@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-require("./post.css");
+//require("./post.css");
 
-interface PostProps extends React.Props<any> {
-    item: any;
+interface IPostProps extends React.Props<any> {
+    title: string;
+    url: string;
 }
 
-export class Post extends React.Component<PostProps, {}> {
+export class Post extends React.Component<IPostProps, any> {
     render() {
-        return (<div key={this.props.item.id} className="post"><a target="_blank" href={this.props.item.url} >{this.props.item.title}</a></div>);
+        return (<div  className="post"><a target="_blank" href={this.props.url} >{this.props.title}</a></div>);
     }
 }
