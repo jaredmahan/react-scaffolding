@@ -1,0 +1,24 @@
+.post {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: #efefef;
+    display: inline-block;
+    a {
+        text-decoration: none;
+        color: #666;
+        &:hover {
+            text-decoration: underline;
+            color: blue;
+        }
+        &:active {
+            color: #666;
+        }
+    }
+    &:last-of-type {
+        margin-bottom: 0px;
+        margin-right: 0px;
+    }
+}

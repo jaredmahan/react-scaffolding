@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-//require("./post.css");
+require("./post.scss");
 
 interface IPostProps extends React.Props<any> {
     title: string;
