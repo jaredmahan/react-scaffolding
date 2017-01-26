@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Post } from "../Post/Post";
-import FlatButton from "material-ui/FlatButton";
 
 // This would be imported via webpack and could use sass or less
-require("./page.css");
+require("./page.scss");
 
 interface PageProps extends React.Props<any> {
     name: string;

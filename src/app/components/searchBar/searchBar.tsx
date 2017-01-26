@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FlatButton from "material-ui/FlatButton";
 import TextField from "material-ui/TextField";
-require("./SearchBar.css");
+require("./SearchBar.scss");
 
 
 interface SearchBarProps extends React.Props<any> {
