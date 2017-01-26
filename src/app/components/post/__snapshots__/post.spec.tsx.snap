@@ -1,0 +1,10 @@
+exports[`Post should render correctly 1`] = `
+<div
+  className="post">
+  <a
+    href="http://www.dummyUrl.com"
+    target="_blank">
+    Post 1
+  </a>
+</div>
+`;
