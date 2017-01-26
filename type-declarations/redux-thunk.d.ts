@@ -10,7 +10,6 @@ declare module "redux" {
   }
 }
 
-
 declare const thunk: Middleware & {
   withExtraArgument(extraArgument: any): Middleware;
 };
